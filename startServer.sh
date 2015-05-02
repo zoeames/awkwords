@@ -1,0 +1,1 @@
+PORT=4444 DB=mongodb://localhost/awkwords  node server/index.js

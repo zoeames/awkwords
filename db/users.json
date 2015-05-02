@@ -1,0 +1,14 @@
+{
+  "_id" : {"$oid":"000000000000000000000001"},
+  "email" : "bob@aol.com",
+  "password" : "$2a$10$XR.IQktUUujLBxed70GQn.jWY1wZ9ThM0Tar9wTqzkI4Uk1uP2Or2",
+  "photo" : "http://i2.wp.com/www.maas360.com/assets/Uploads/defaultUserIcon.png",
+  "games" : []
+}
+{
+  "_id" : {"$oid":"000000000000000000000002"},
+  "email" : "sue@aol.com",
+  "password" : "$2a$10$XR.IQktUUujLBxed70GQn.jWY1wZ9ThM0Tar9wTqzkI4Uk1uP2Or2",
+  "photo" : "http://i2.wp.com/www.maas360.com/assets/Uploads/defaultUserIcon.png",
+  "games" : []
+}

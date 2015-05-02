@@ -1,0 +1,20 @@
+{
+  "name": "awkwords",
+  "version": "0.0.0",
+  "homepage": "https://github.com/zoeames/awkwords",
+  "authors": [
+    "Zoe Ames <zoeames@gmail.com>"
+  ],
+  "description": "awkwords Project",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.3.0-rc.2",
+    "angular-route": "1.3.0-rc.2",
+    "angular-localforage": "~0.2.10",
+    "bootstrap": "~3.2.0",
+    "fontawesome": "~4.2.0",
+    "underscore": "~1.7.0",
+    "jquery": "~2.1.1",
+    "toastr": "~2.0.3"
+  }
+}
