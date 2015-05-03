@@ -9,7 +9,6 @@ exports.info = function(req, res, next){
     console.log(chalk.bgRed('--------------------------------------------------------------------------------'));
     console.log(chalk.bold.red('TIME   :'), chalk.bold.blue(new Date()));
     console.log(chalk.bold.red('PORT   :'), process.env.PORT);
-    console.log(chalk.bold.red('DB     :'), process.env.DB);
     console.log(chalk.bold.red('URL    :'), req.url);
     console.log(chalk.bold.red('VERB   :'), req.method);
     console.log(chalk.bold.red('SESSID :'), req.sessionID);

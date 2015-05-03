@@ -6,7 +6,6 @@ var morgan         = require('morgan'),
     session        = require('express-session'),
     RedisStore     = require('connect-redis')(session),
     debug          = require('../lib/debug'),
-    security       = require('../lib/security'),
     home           = require('../controllers/home');
 
 module.exports = function(app, express){
@@ -17,7 +16,6 @@ module.exports = function(app, express){
   app.use(methodOverride());
   app.use(session({store:new RedisStore(), secret:'my super secret key', resave:true, saveUninitialized:true, cookie:{maxAge:null}}));
 
-  app.use(security.authenticate);
   app.use(debug.info);
 
   app.get('/home', home.index);
