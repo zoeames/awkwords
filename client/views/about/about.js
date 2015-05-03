@@ -3,7 +3,7 @@
 
   angular.module('capstone')
   .controller('AboutCtrl', ['$scope', function($scope){
-
+    $scope.greeting = 'hello';
   }]);
 })();
 
