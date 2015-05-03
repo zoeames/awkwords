@@ -6,8 +6,9 @@ var port     = process.env.PORT,
      app       = express(),
      server   = module.exports = require('http').createServer(app),
      clientIo  = require('socket.io').listen(server),
-     options   = {transports: ['websocket'], 'force new connection': true}
-     serverIo = require('socket.io-client').connect(options);
+     options   = {transports: ['websocket'], 'force new connection': true},
+     socketUrl = 'NEED A SERVER URL/PORT',
+     serverIo = require('socket.io-client').connect(socketUrl, options);
 
 require('./lib/config')(app);
 require('./routes/routes')(app, express);
