@@ -5,14 +5,16 @@ var port     = process.env.PORT,
      express = require('express'),
      app       = express(),
      server   = module.exports = require('http').createServer(app),
-     io      = require('socket.io').listen(server);
+     clientIo  = require('socket.io').listen(server),
+     options   = {transports: ['websocket'], 'force new connection': true}
+     serverIo = require('socket.io-client').connect(options);
 
 require('./lib/config')(app);
 require('./routes/routes')(app, express);
-//io.sockets.on('connection', require('./routes/socket-routes'));
-io.sockets.on('connection', function(){
-    console.log('socket connected');
-});
+// client socket connection
+io.sockets.on('connection', require('./routes/socket-routes').client);
+// server client connection
+require('./routes/socket-routes').gameServer(serverIo);
 
 require('./lib/mongodb')(db, function(){
   server.listen(port);
